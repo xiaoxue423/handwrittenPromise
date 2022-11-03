@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function 摇色子(fn){
+      return new Promise(function(resolve, reject){
+        setTimeout(()=>{
+        const res = Math.floor(Math.random()*6+1)
+        resolve(res) 
+      },3000)
+      })
+    }
+    摇色子().then(n=>{
+      console.log("n",`摇到了${n}`)
+    })
+  </script>
+  
+</body>
+</html>
